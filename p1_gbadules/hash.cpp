@@ -58,6 +58,7 @@ void HashTable::insertItem(string key)
 // Print the contents of the first 5 slots
 void HashTable::printTable()
 {
+    cout << "==== Printing the contents of the first 5 slots ====" << endl;
     for (int i = 0; i < min(tableSize, 5); i++)
     {
         cout << "Slot " << i << ": ";
@@ -74,7 +75,9 @@ void HashTable::printTable()
 // Print the length of each slot
 void HashTable::printSlotLengths()
 {
-    for (int i = 0; i < tableSize; i++)
+    cout << "==== Printing the slot lengths ====" << endl;
+
+    for (int i = 0; i < 5; i++)
     {
         int count = 0;
         Node *entry = table[i];
@@ -119,3 +122,4 @@ float HashTable::calculateStandardDeviation()
     variance = variance / tableSize;
     return sqrt(variance);
 }
+
